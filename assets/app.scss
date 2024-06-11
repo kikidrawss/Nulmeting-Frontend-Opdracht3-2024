@@ -16,6 +16,23 @@ body{
   }
 }
 
+// Stylizing the table with grey and white fields
+table {
+  font-family: 'Roboto', sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
 // Default, desktop view
 @include desktop {
   .element-wrapper {
@@ -40,15 +57,6 @@ body{
     > .element-body {
       margin: auto;
       width: $container-width-small;
-    }
-  }
-}
-
-@include tablet-small {
-  .element-wrapper {
-    > .element-body {
-      margin: 0 $container-margin-medium;
-      width: 100%;
     }
   }
 }
